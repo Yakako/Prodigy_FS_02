@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="{{ url_for('employees') }}">Back to Employees</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+
+        <h2>Edit Employee</h2>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flash">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <input type="text" name="name" placeholder="Full Name" value="{{ employee.name }}" required>
+            <input type="email" name="email" placeholder="Email" value="{{ employee.email }}" required>
+            <input type="text" name="department" placeholder="Department" value="{{ employee.department }}" required>
+            <input type="text" name="position" placeholder="Position" value="{{ employee.position }}" required>
+            <input type="number" name="salary" placeholder="Salary" value="{{ employee.salary }}" step="0.01" required>
+            <button type="submit">Update Employee</button>
+        </form>
+    </div>
+</body>
+</html>

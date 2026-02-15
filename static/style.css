@@ -1,0 +1,118 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    width: 400px;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00c6ff;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Links */
+a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Flash messages */
+.flash {
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Dashboard & Links */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} 
